@@ -1,0 +1,15 @@
+---
+title: "Building an OpenAI-Compatible AI Server with a Single RTX 5090"
+date: "2026-06-13"
+tags: ["rtx5090", "linux", "vllm"]
+---
+
+import { GenerateWidget } from '../../components/MatrixComponents.jsx';
+
+在 QZ-Lab 部署单卡 RTX 5090 运行大模型时，内核的虚拟内存管理和 Linux 系统的并发吞吐至关重要。
+我们需要将底层常驻的高冷算力完美映射出来。
+
+<GenerateWidget capture={true} id="capture_5090_v4" />
+
+通过上面的真机遥测可以看到，32GB GDDR7 显存配合 Llama-3.1-70B 可以达到极佳的吞吐性能。
+本次实验同时引入了 Qwen3.6-35B-A3B-FP8 模型进行并行测试
